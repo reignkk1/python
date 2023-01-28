@@ -1,6 +1,5 @@
-my_name = "김민겸"
-age = 25
-dead = False
+def sayHello(name,age):
+  print('Hello,' , name , ' i am ' , age)
 
-print('hello, my name is ',my_name)
-print('i am ',age)
+
+sayHello('김민겸',26)
