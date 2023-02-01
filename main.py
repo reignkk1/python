@@ -1,8 +1,21 @@
-my_age = 21
+from random import randint
 
-if my_age > 20:
-  print('20살 초과입니다.')
-elif my_age <20:
-  print('20살 미만입니다.')
-else:
-  print('20살 입니다.')
+
+print('카지노에 오신걸 환영합니다.')
+
+computer_number = randint(1,5)
+
+
+while True:
+
+  user_number = int(input('숫자를 입력해주세요!'))
+  if user_number == computer_number:
+    print('승리!')
+    break
+  elif user_number < computer_number:
+    print('작습니다 ㅠㅠ 실패')
+  else:
+    print('큽니다 ㅠㅠ 실패')
+
+
+
