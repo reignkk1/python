@@ -1,12 +1,15 @@
-player = {
-  'name':'김민겸',
-  'age':26,
-  'nickname':'잘생긴',
-  'favorite_food':['pizza','chicken']
-}
+from requests import get
 
-print(player)
-player['favorite_food'].append('kimchi')
-print(player)
+foods = [
+  "kimchi",
+  "ham",
+  "chicken",
+]
 
+for food in foods:
+  print("hi")
+
+
+response = get('https://www.naver.com')
+print(response)
 
