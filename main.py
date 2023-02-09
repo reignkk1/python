@@ -1,15 +1,13 @@
 from requests import get
+from bs4 import BeautifulSoup
 
-foods = [
-  "kimchi",
-  "ham",
-  "chicken",
-]
+base_url = 'https://weworkremotely.com/remote-jobs/search?=%E2%9C%93&term='
+search_term = 'python'
 
-for food in foods:
-  print("hi")
+response = get(f'{base_url}{search_term}')
 
-
-response = get('https://www.naver.com')
-print(response)
-
+if response.status_code != 200:
+  print('에러가 발생했습니다.')
+else:
+  soup = BeautifulSoup(response.text,'html.parser')
+  print(soup.find_all('title'))
